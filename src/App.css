@@ -1,0 +1,616 @@
+/* App.scss */
+
+body {
+  margin: 0; /* Bỏ margin mặc định của body */
+}
+
+.topsection1 {
+  background-color: rgb(0, 125, 184); /* Màu nền cho thẻ div đầu tiên */
+  height: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  height: 100%; /* Đảm bảo chiều cao của row bằng với topsection1 */
+  width: 75%; /* Chiều rộng của row */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.right img {
+  width: 34px;
+  padding-top: 5px;
+}
+
+.hotline-label, .hotline-number {
+  color: white; /* Màu chữ trắng */
+  font-size: 16px; /* Kích thước font chữ tùy chỉnh */
+  margin-right: 5px; /* Khoảng cách giữa hai thẻ span */
+}
+
+/* Đặt style cho .topsection2 */
+.topsection2 {
+  padding: 20px 190px; /* Khoảng cách trong phần trên cùng */
+}
+
+/* Đặt style cho .header2 */
+.header2 {
+  display: flex; /* Sử dụng flexbox để sắp xếp các phần tử ngang hàng */
+  align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+  justify-content: space-between; /* Tạo khoảng cách đều giữa các phần tử */
+}
+
+/* Đặt style cho hình ảnh logo */
+.header2 img {
+  width: 150px; /* Điều chỉnh kích thước hình ảnh */
+  height: auto; /* Giữ tỉ lệ hình ảnh */
+  margin-right: 100px; /* Khoảng cách bên phải của logo */
+}
+
+/* Đặt style cho slogan */
+.header2 .tagline {
+  font-size: 21px;
+  color: #007db8;
+  white-space: nowrap;
+  font-weight: 500;
+  margin: 0 210px; /* Khoảng cách trái và phải của slogan */
+}
+
+/* Đặt style cho phần tìm kiếm */
+.header2 .search {
+  flex-grow: 1; /* Làm cho phần tìm kiếm chiếm không gian còn lại */
+  margin-left: 70px; /* Khoảng cách bên trái của phần tìm kiếm */
+}
+
+.header2 .search input {
+  width: 79%; /* Chiếm toàn bộ không gian của .search */
+  padding: 12px 40px 12px 12px; /* Padding để tạo không gian cho icon */
+  border-left: 1px solid #dfdfdf; /* Chỉ có viền trái */
+  border-right: 1px solid #dfdfdf; /* Chỉ có viền phải */
+  font-size: 15px; /* Kích thước chữ */
+  outline: none; /* Bỏ viền outline khi focus */
+  background-image: url("/src/assets/Images/icon-search.png"); /* Icon nằm ở bên phải */
+  background-size: 18px 18px; /* Kích thước của icon */
+  background-position: 93% center; /* Vị trí của icon */
+  background-repeat: no-repeat; /* Không lặp lại icon */
+  border-top: none; /* Bỏ viền trên */
+  border-bottom: none; /* Bỏ viền dưới */
+  border-radius: 0; /* Bỏ bo góc nếu cần */
+}
+
+/* CSS file: Footer.css */
+.topmenu {
+  padding: 5px 0;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative; /* Đảm bảo không bị ảnh hưởng bởi các phần tử con */
+}
+
+.topcontainer {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topcontainer ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative; /* Position relative để quản lý dropdown menu */
+}
+
+.topcontainer ul li {
+  margin: 0 15px;
+  cursor: pointer; /* Thêm con trỏ để chỉ ra rằng có thể click được */
+  position: relative; /* Position relative để đặt dropdown menu bên trong */
+}
+
+.topcontainer ul li a {
+  color: rgb(0, 0, 0); /* Màu chữ đen */
+  text-decoration: none; /* Bỏ gạch chân */
+  padding-bottom: 6px; /* Đảm bảo khoảng cách bên dưới của chữ */
+  display: block; /* Đảm bảo các liên kết chiếm toàn bộ chiều rộng của mục */
+}
+
+.topcontainer ul li a:hover,
+.topcontainer ul li a.active {
+  color: #0055ba; /* Đổi màu chữ khi di chuột vào hoặc được chọn */
+  border-bottom: 2px solid #0055ba; /* Thêm gạch chân màu xanh */
+  text-decoration: none; /* Bỏ gạch chân */
+}
+
+.topcontainer ul li:hover .dropdown-menu {
+  display: block; /* Hiển thị menu con khi di chuột vào mục chính */
+}
+
+.dropdown-menu {
+  display: none; /* Ẩn menu con mặc định */
+  position: absolute; /* Đặt menu con vị trí tuyệt đối */
+  background-color: #ffffff; /* Màu nền của menu con */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng cho menu con */
+  padding: 0; /* Xóa padding mặc định */
+  list-style: none; /* Xóa dấu chấm danh sách */
+  z-index: 1000; /* Đảm bảo menu con nằm trên các phần tử khác */
+}
+
+.dropdown-menu li {
+  margin: 0; /* Xóa margin mặc định */
+}
+
+.dropdown-menu a {
+  padding: 15px; /* Thêm khoảng cách trong cho các mục con */
+  color: black; /* Màu chữ của menu con */
+}
+
+/* Slide styles */
+.slide-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.slide {
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  
+}
+
+.caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #fff;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent; /* Không hiển thị nền */
+  color: #fff; /* Màu chữ trắng */
+  border: none; /* Xóa viền */
+  padding: 10px; /* Khoảng cách bên trong nút */
+  cursor: pointer; /* Hiển thị con trỏ chuột khi hover */
+  font-size: 24px; /* Kích thước chữ */
+  transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi cho nền */
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.5); /* Hiển thị nền khi hover */
+}
+
+.prev {
+  left: 20px; /* Đặt vị trí nút bên trái */
+}
+
+.next {
+  right: 20px; /* Đặt vị trí nút bên phải */
+}
+
+
+/* Styles for carousel indicators */
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px; /* Khoảng cách từ đáy slide */
+  left: 50%;
+  transform: translateX(-50%); /* Căn giữa các chỉ số */
+  display: flex; /* Đặt các chỉ số theo hàng ngang */
+}
+
+.carousel-indicators button {
+  background-color: rgba(255, 255, 255, 0.5); /* Màu nền cho chỉ số */
+  border: none; /* Xóa viền */
+  border-radius: 50%; /* Bo tròn các chỉ số */
+  width: 12px; /* Kích thước của chỉ số */
+  height: 12px; /* Kích thước của chỉ số */
+  margin: 0 5px; /* Khoảng cách giữa các chỉ số */
+  cursor: pointer; /* Hiển thị con trỏ khi hover */
+  transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi cho màu nền */
+}
+
+.carousel-indicators button.active {
+  background-color: #ffffff; /* Màu nền cho chỉ số hiện tại */
+}
+
+
+.thumbnail{
+  background-image: linear-gradient(#00a4d1, #005492);
+  width: 100%;
+  height: 250px;
+  align-content: center;
+  display: flex; /* Sử dụng Flexbox để căn giữa nội dung */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  .thumbnail-container{
+   
+    width: 80%;
+    height: 210px;
+    display: flex; /* Sử dụng Flexbox để sắp xếp các thẻ con nằm ngang */
+    justify-content: space-between; /* Căn giữa các thẻ con với khoảng cách đều */
+    align-items: center; /* Căn giữa các thẻ con theo chiều dọc */
+    .box {
+     
+      width: 30%; /* Đặt chiều rộng của từng thẻ con */
+      height: 100%; /* Đặt chiều cao của từng thẻ con */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-left: 1px solid #ffffff; 
+      
+      
+    }
+  }
+}
+.content {
+  display: flex;
+  flex-direction: column; /* Sắp xếp theo chiều dọc */
+  align-items: center; /* Căn giữa nội dung theo chiều ngang */
+  text-align: center; /* Căn giữa văn bản */
+}
+
+.content img {
+  width: 50px; /* Chiều rộng của hình ảnh */
+  height: auto; /* Chiều cao tự động dựa trên chiều rộng */
+  margin-bottom: 10px; /* Khoảng cách giữa hình ảnh và các thẻ p */
+}
+
+.content p {
+  margin: 5px 0; /* Khoảng cách giữa các thẻ p */
+  font-size: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'HeLvetical';
+  
+}
+.content i {
+  color: #fff;
+  font-size: 14px;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 25px;
+  width: 75%;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.thumbnail-container .box {
+  transition: background-color 0.3s ease;
+}
+
+.thumbnail-container .box:hover {
+  background-color: #3995c7; /* Màu nền thay đổi khi di chuột */
+}
+
+
+.maincontent {
+  background: white;
+  width: 100%;
+  height: auto;
+  margin-top: 35px;
+  margin-bottom: 45px;
+  display: flex; /* Sử dụng Flexbox để căn giữa nội dung */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.maincontent-container {
+  background: white;
+  width: 80%;
+  height: auto;
+  display: flex; /* Sử dụng Flexbox để sắp xếp các thẻ con nằm ngang */
+  justify-content: space-between; /* Căn giữa các thẻ con với khoảng cách đều */
+  align-items: center; /* Căn giữa các thẻ con theo chiều dọc */
+}
+
+.box1 {
+  background: #f7f7f7;
+  width: 30%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.ul-bullet {
+  list-style-type: none; 
+
+  li {
+    border-bottom: 2px solid #dadada;
+  }
+}
+
+.where {
+  color: #034e95;
+  font-size: 20px;
+  margin-bottom: 0;          
+}
+
+.contactnumber {
+  color: #43433D;
+  font-size: 18px;
+  padding-left: 30px;
+  background-image: url("../../assets/Images/iconPhone.png");
+  background-size: 16px;
+  background-repeat: no-repeat;
+  margin-top: 5px;    
+  transition: color 0.3s ease;
+}
+
+.contactnumber:hover {
+  color: rgb(255, 136, 0); /* Màu cam khi di chuột */
+}
+
+
+
+.contactHoline {
+  color: #4d4d4d;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.contactHoline a {
+  text-decoration: none;
+  color: #0055ba;
+}
+
+.item-fb, .item-yt, .item-zl {
+  background-size: cover;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  border-style: solid;
+  border-color: #f5f5f5;
+}
+
+.item-fb {
+  background-image: url("../src/assets/Images/iconFace.png");
+}
+
+.item-yt {
+  background-image: url("../src/assets/Images/iconYoutobe.png");
+}
+
+.item-zl {
+  background-image: url("../src/assets/Images/iconzalo.png");
+}
+
+.item-social {
+  width: 40%;
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box2 {
+  width: 30%; /* Đặt chiều rộng của từng thẻ con */
+  height: 600px; /* Đặt chiều cao của từng thẻ con */
+  display: flex;
+  justify-content: flex-start; /* Đẩy nội dung lên phía trên */
+  align-items: center;
+  flex-direction: column; /* Đặt các phần tử con theo cột */
+  padding-top: 20px; 
+}
+
+.ezMobileTrading {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.ez {
+  color: black;
+}
+
+.mobileTrading {
+  color: #034e95;
+}
+
+.exmobiletrading {
+  width: 100%;
+  height: auto;
+  padding-top: 30px;
+  background-size: cover;
+}
+
+.dowload-row {
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-around; /* Đặt khoảng cách giữa các phần tử */
+  align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.dlr1, .dlr2 {
+  background-size: cover;
+  width: 30%; /* Đặt chiều rộng của từng thẻ con */
+  display: flex;
+  justify-content: center; /* Căn giữa nội dung theo chiều ngang */
+  align-items: center; /* Căn giữa nội dung theo chiều dọc */
+}
+
+.dlr1 img, .dlr2 img {
+  width: 150px; /* Đặt chiều rộng của hình ảnh */
+  height: auto; /* Đặt chiều cao tự động để giữ tỷ lệ */
+}
+
+.dlr1 img {
+  margin-right: 20px; /* Thêm khoảng cách bên phải của hình ảnh đầu tiên */
+}
+
+.box3 {
+  width: 30%; /* Đặt chiều rộng của từng thẻ con */
+  height: 670px; /* Đặt chiều cao của từng thẻ con */
+  display: flex;
+  justify-content: flex-start; /* Đẩy nội dung lên phía trên */
+  flex-direction: column; /* Đặt các phần tử con theo cột */
+}
+
+.tab {
+  display: flex;
+  background-color: #e3e3e3;
+  text-align: center;
+  line-height: 16px;
+  font-size: 14px;
+}
+
+.tab1 {
+  width: 30%;
+  background-color: #007cb8;
+  border-bottom: 4px solid #0a4f92;
+  color: #fff;
+}
+
+.tab2, .tab3, .tab4 {
+  width: 43%; /* Điều chỉnh giá trị phù hợp cho tab3 và tab4 */
+  background-color: #e3e3e3; /* Màu nền mặc định */
+  transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi mượt */
+}
+
+.tab2 {
+  width: 43%;
+}
+
+.tab3 {
+  width: 25%;
+}
+
+.tab4 {
+  width: 40%;
+}
+
+.tab2:hover, .tab3:hover, .tab4:hover {
+  background-color: #007cb8; /* Màu nền khi di chuột */
+  color: #fff; /* Màu chữ khi di chuột */
+  border-bottom: 4px solid #0a4f92; /* Dấu gạch chân khi di chuột */
+}
+
+.menutab-title {
+  color: #0055ba; /* Màu xanh */
+  font-size: 20px; /* Kích thước chữ */
+  margin: 0; /* Loại bỏ margin */
+}
+
+.nemutab-content {
+  color: black; /* Màu đen */
+  font-size: 16px; /* Kích thước chữ */
+  margin: 10px 0; /* Giảm khoảng cách trên và dưới */
+}
+
+.menutab-date {
+  color: #a7a7a7; /* Màu xám nhạt */
+  font-size: 15px; /* Kích thước chữ */
+  margin: 10px 0; /* Giảm khoảng cách trên và dưới */
+}
+
+a {
+  text-decoration: none; /* Xóa dấu gạch chân mặc định cho thẻ a */
+}
+
+.tabcontent ul {
+  color: #0055ba;
+  padding: 0; /* Loại bỏ padding */
+}
+
+.tabcontent li {
+  margin-bottom: 20px; /* Thêm khoảng cách giữa các mục */
+}
+
+.btn {
+  width: 34%;
+  font-size: 17px;
+  color: #074b92;
+  border: 2px solid #074b92;
+  border-radius: 20px;
+  float: right;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s; /* Thêm hiệu ứng chuyển đổi mượt mà */
+}
+
+.btn:hover {
+  background-color: #074b92; /* Màu nền khi di chuột vào */
+  color: #fff; /* Màu chữ khi di chuột vào */
+}
+
+.btn1 {
+  padding: 6px 6px;
+  text-align: center;
+}
+
+.indext{
+  width: 100%;
+  height: 90px;
+  display: flex;
+  background-color: #f5f5f5;
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  .fix-container{
+    width: 75%; /* Đặt chiều rộng của từng thẻ con */
+    height: 90px; /* Đặt chiều cao của từng thẻ con */
+    display: flex; /* Sử dụng Flexbox để sắp xếp các thẻ con nằm ngang */
+    justify-content: space-between; /* Căn giữa các thẻ con với khoảng cách đều */
+    align-items: center; /* Căn giữa các thẻ con theo chiều dọc */
+    
+  }
+  .owl-item-active{
+    font-size: 16px;
+    text-align: center; 
+
+  }
+  .font-yellow{
+    font-weight: bold;
+    font-size: 17px;
+    color: #ffe000 ;
+  }
+  
+}
+
+
+.font-bomtom{
+    color: #222;
+    font-size: 11px !important;
+    padding-top: 10px;
+    font-size: 14px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+
+  }
+  .name-index1{
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    width: 100%; /* Đảm bảo chiều rộng được đặt để căn giữa hoạt động chính xác */
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+  }
+.owl-item-active1{
+   width: 190px;
+}

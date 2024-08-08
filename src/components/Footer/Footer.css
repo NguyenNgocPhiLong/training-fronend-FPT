@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  .footer {
+    background-color: #4d4d4d;
+    color: white;
+    padding: 0;
+  }
+  .footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .footer-column {
+    flex: 1;
+    padding: 0 15px;
+  }
+  .footer-column h3 {
+    color: #ff6700;
+    font-size: 16px;
+  }
+  .footer-column p, .footer-column li {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  .footer-column li {
+    list-style: none;
+  }
+  .footer-column li i {
+    margin-right: 8px;
+  }
+  .footer-bottom {
+    background-color: #004b8d;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+  .topfooter {
+    background-color: #ccc;
+    padding: 5px 0;
+    height: 30px;
+    display: flex; /* Sử dụng Flexbox để căn giữa nội dung */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+  }
+  .topcontainer {
+    width: 80%;
+    margin: 0 auto; /* Căn giữa topcontainer */
+    display: flex;
+    justify-content: center; /* Căn giữa nội dung */
+    align-items: center; /* Căn giữa theo chiều dọc */
+  }
+  .topcontainer ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .topcontainer ul li {
+    margin: 0 30px; /* Khoảng cách giữa các mục */
+    color: rgb(0, 0, 0);
+   
+  }
